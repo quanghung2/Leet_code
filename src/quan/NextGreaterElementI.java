@@ -1,4 +1,5 @@
 package quan;
+import java.util.Stack;
 
 public class NextGreaterElementI {
     public static void main(String[] args) {
@@ -12,5 +13,6 @@ public class NextGreaterElementI {
         for (int i = 0; i < nums1.length; i++){
 
         }
+        return 0;
     }
 }
