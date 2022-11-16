@@ -2,9 +2,11 @@ package quan;
 
 public class CheckStraighLine {
     private static boolean checkRadian (int[] A, int[] B, int[] C){
+        // check 2 vector if straigh or not
         return (A[0] - B[0]) * (A[1] - C[1]) == (A[0] - C[0]) * (A[1] - B[1]);
     }
     public static boolean checkStraightLine(int[][] coordinates){
+        // loop 2 random point and return straight with start point or not
         for(int[] A: coordinates){
             for(int[] B: coordinates){
                 if(!checkRadian(A, B, coordinates[0])){
