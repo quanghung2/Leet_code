@@ -2,6 +2,11 @@ package quan;
 import java.util.Arrays;
 
 public class MoveZeroes {
+    /**
+     *
+     * @param nums
+     * not return (Void functions are stand-alone statements)
+     */
     public static int[] moveZeroes(int[] nums){
         Arrays.sort(nums);
         int n = nums.length;
@@ -17,10 +22,11 @@ public class MoveZeroes {
     }
     // expected result: 1 3 9 12 0 0 0
     public static void main(String[] args) {
-        int[] arr = new int[]{0,1,0,3,12,0,9};
-        moveZeroes(arr);
-        for (int a: arr){
+        int[] arr = new int[]{0,1,2,3,0};
+        for (int a: moveZeroes(arr)){
             System.out.println(a);
         }
+        //Todo: Write lambda expression
+        Arrays.stream(moveZeroes(arr)).forEach(a-> System.out.println(a));
     }
 }
