@@ -15,7 +15,7 @@ public class MoveZeroes {
         }
         return sorted_array;
     }
-
+    // expected result: 1 3 9 12 0 0 0
     public static void main(String[] args) {
         int[] arr = new int[]{0,1,0,3,12,0,9};
         moveZeroes(arr);
