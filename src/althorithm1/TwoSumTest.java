@@ -1,8 +1,8 @@
 package althorithm1;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
-
 class TwoSumTest {
     TwoSum sum = new TwoSum();
     int[] nums = {2,7,11,15};
