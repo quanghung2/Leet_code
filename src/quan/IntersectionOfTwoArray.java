@@ -1,31 +1,33 @@
 package quan;
 
-import java.util.Collections;
-import java.util.Set;
-import java.util.HashSet;
+import java.util.*;
 
 public class IntersectionOfTwoArray {
+    //Todo: write lambda expression :))
     public static int[] intersect(int[] num1, int[] num2){
-        int n = 0;
-        if (num1.length > num2.length) {
-            n = num1.length;
-        } else {
-            n = num2.length;
-        }
-        int[] nums = new int[n];
-        int k = 0;
+//        int n = 0;
+//        if (num1.length > num2.length) {
+//            n = num1.length;
+//        } else {
+//            n = num2.length;
+//        }
+//        int[] nums = new int[n];
+//        int k = 0;
 
-        Set<Integer> set1 = new HashSet<Integer>();
-        Collections.addAll(set1, num1);
+        Set<Integer> set1 = new HashSet<>();
+        Arrays.stream(num1).forEach(set1::add);
 
-        Set<Integer> set2 = new HashSet<Integer>();
-        Collections.addAll(set2, num2);
-        for (Integer num: set1) {
-            if (set2.contains(num)){
-                nums[k] = num;
-            } k++;
-        }
-        return nums;
+        Set<Integer> set2 = new HashSet<>();
+        Arrays.stream(num2).forEach(set2::add);
+
+        List<Integer> result = new ArrayList<>();
+
+        set1.forEach(e -> {
+            if(set2.contains(e)){
+                result.add(e);
+            }
+        });
+        return  result.stream().mapToInt(Integer::intValue).toArray();
     }
 
     public static void main(String[] args) {
