@@ -60,8 +60,9 @@ public class Student {
         }
         //Todo: return về tên và tuổi sắp xếp giảm dần
         public List<Student> sortByNameAndAge(List<Student> list){
-            List<Student> result = list.stream().sorted(Comparator.comparingInt(Student::getAge))
-                                    .collect(Collectors.toList());
+            List<Student> result = list.stream().sorted(Comparator.comparingInt(Student::getAge)
+                    .reversed())
+                    .collect(Collectors.toList());
             return result;
         }
     }
