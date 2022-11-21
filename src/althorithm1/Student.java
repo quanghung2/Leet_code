@@ -48,8 +48,8 @@ public class Student {
 
 
         //Todo: return id;
-        public void listId(List<Student> list){
-          list.stream().forEach(i -> System.out.println(i.getId());
+        public List<int> listId(List<Student> list){
+          return list.stream().forEach(i -> i.getId());
         }
 
         //Todo: return age max
