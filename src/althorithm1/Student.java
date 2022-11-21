@@ -1,7 +1,9 @@
 package althorithm1;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Student {
     int id;
@@ -58,7 +60,8 @@ public class Student {
         }
         //Todo: return về tên và tuổi sắp xếp giảm dần
         public List<Student> sortByNameAndAge(List<Student> list){
-            List<Student> result = list.stream().sorted((s1, s2) -> s1.getName().compareTo(s2.getName()));
+            List<Student> result = list.stream().sorted(Comparator.comparingInt(Student::getAge))
+                                    .collect(Collectors.toList());
             return result;
         }
     }
