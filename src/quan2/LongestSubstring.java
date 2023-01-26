@@ -1,4 +1,4 @@
-package quan;
+package quan2;
 
 import java.util.HashSet;
 import java.util.Stack;
